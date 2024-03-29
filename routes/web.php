@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AddressViewController;
+use App\Http\Controllers\ContactViewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+    Route::get('/addresses', [AddressViewController::class, 'index']);
+    Route::get('/contacts', [ContactViewController::class, 'index']);
+    
 });
